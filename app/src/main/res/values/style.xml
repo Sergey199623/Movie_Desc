@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_title">
+        <item name="android:textSize">40sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#ECECEC</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">6</item>
+        <item name="android:shadowRadius">12</item>
+    </style>
+
+    <style name="age">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!--
+      Font family: Roboto
+      Line height: 20sp
+      (identical to box height)
+    -->
+    <!-- styles.xml -->
+    <style name="tag">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF3466</item>
+    </style>
+
+    <style name="storyline">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ECECEC</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">6</item>
+        <item name="android:shadowRadius">12</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="storyline_desc">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="style_reviews">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#6D6D80</item>
+    </style>
+
+</resources>

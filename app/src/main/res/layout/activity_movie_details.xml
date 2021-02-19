@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="530dp"
+        android:layout_height="298dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-24dp"
+        android:background="@drawable/mask"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="198dp"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mask" >
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age_13"
+            android:textAppearance="@style/age"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_below="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_main_movie_desc"
+            android:textAppearance="@style/style_title"
+            android:lineSpacingExtra="0sp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/tag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlTitle" />
+
+    <LinearLayout
+        android:id="@+id/rlRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTag">
+
+        <ImageView
+            android:layout_width="13.02dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="3.25dp"
+            android:src="@drawable/ic_star_red"/>
+
+        <ImageView
+            android:layout_width="13.02dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="3.25dp"
+            android:src="@drawable/ic_star_red"/>
+
+        <ImageView
+            android:layout_width="13.02dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="3.25dp"
+            android:src="@drawable/ic_star_red"/>
+
+        <ImageView
+            android:layout_width="13.02dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="3.25dp"
+            android:src="@drawable/ic_star_red"/>
+
+        <ImageView
+            android:layout_width="13.02dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="8.89dp"
+            android:src="@drawable/ic_star_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/count_review125"
+            android:textAppearance="@style/style_reviews" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlStoryline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlRating">
+
+        <TextView
+            android:id="@+id/tvStoryline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storyline"
+            android:textAppearance="@style/storyline"
+            android:lineSpacingExtra="4sp" />
+
+        <TextView
+            android:id="@+id/tvStorylineDesc"
+            android:layout_below="@id/tvStoryline"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/avenger_end_game_storyline"
+            android:textAppearance="@style/storyline_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:lineSpacingExtra="4sp"
+            android:alpha="0.75" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
