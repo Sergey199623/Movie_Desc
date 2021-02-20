@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import com.sv.moviedesc.activities.MovieDetailsActivity
+import com.sv.moviedesc.fragments.FragmentMoviesList
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,9 +15,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val tvMove : TextView = findViewById(R.id.tvMoveToMovie)
+//        val tvMove : TextView = findViewById(R.id.tvMoveToMovie)
 
-        tvMove.setOnClickListener { moveToMovieDesc() }
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .addToBackStack(null)
+                .replace(R.id.fragment_container_view, FragmentMoviesList())
+                .commit()
+        }
+
+//        tvMove.setOnClickListener { moveToMovieDesc() }
     }
 
     private fun moveToMovieDesc() {
@@ -24,19 +32,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 }
