@@ -85,6 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/title_main_movie_desc"
+                    android:maxEms="5"
                     android:textAppearance="@style/style_title"
                     android:lineSpacingExtra="0sp"
                     />
