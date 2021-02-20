@@ -9,24 +9,23 @@
     <fragment
         android:id="@+id/fragmentMoviesList"
         android:name="com.sv.moviedesc.fragments.FragmentMoviesList"
-        android:label="FragmentMoviesList"
-        tools:layout="@layout/fragment_movies_list">
+        android:label="FragmentMoviesList">
 
         <action
             android:id="@+id/next_action"
-            app:destination="@+id/fragmentMoviesDetails">
-        </action>
-
+            app:destination="@id/fragmentMoviesDetails" />
+        <action
+            android:id="@+id/action_fragmentMoviesList_to_fragmentMoviesDetails"
+            app:destination="@id/fragmentMoviesDetails" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentMoviesDetails"
         android:name="com.sv.moviedesc.fragments.FragmentMoviesDetails"
-        android:label="FragmentMoviesDetails"
-        tools:layout="@layout/fragment_movies_details"/>
+        android:label="FragmentMoviesDetails" />
 
     <activity
-        android:id="@+id/mainActivity"
+        android:id="@+id/activity_main"
         android:name="com.sv.moviedesc.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
