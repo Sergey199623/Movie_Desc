@@ -61,4 +61,9 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="top_menu_back">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#6D6D80</item>
+    </style>
+
 </resources>
