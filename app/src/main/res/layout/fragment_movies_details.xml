@@ -174,7 +174,7 @@
                     android:id="@+id/tvStorylineDesc"
                     android:layout_below="@id/tvStoryline"
                     android:layout_marginTop="8dp"
-                    android:maxEms="19"
+                    android:maxEms="18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/avenger_end_game_storyline"
