@@ -18,5 +18,10 @@
         assemble once more in order to reverse <br/>Thanos\' actions and restore balance to the
         universe.</string>
     <string name="count_review125">125 REVIEWS</string>
+    <string name="cast">Cast</string>
+    <string name="actor_robert_downey">Robert Downey Jr.</string>
+    <string name="actor_chris_evans">Chris Evans</string>
+    <string name="actor_mark_ruffalo">Mark Ruffalo</string>
+    <string name="actor_chris_hemsworth">Chris Hemsworth</string>
 
 </resources>

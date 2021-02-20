@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black">
+    android:background="#111111">
 
     <View
         android:id="@+id/mask"
@@ -142,5 +142,122 @@
             android:alpha="0.75" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cast"
+        android:textAppearance="@style/cast"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlStoryline" />
+
+    <LinearLayout
+        android:id="@+id/llCast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCast" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/ivCast1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/image_robert"/>
+
+            <TextView
+                android:id="@+id/tvActor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCast1"
+                android:layout_marginTop="6dp"
+                android:maxEms="5"
+                android:text="@string/actor_robert_downey"
+                android:textAppearance="@style/actors"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/ivCast2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/image_chris"/>
+
+            <TextView
+                android:id="@+id/tvActor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCast2"
+                android:layout_marginTop="6dp"
+                android:maxEms="5"
+                android:text="@string/actor_chris_evans"
+                android:textAppearance="@style/actors"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/ivCast3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/image_mark"/>
+
+            <TextView
+                android:id="@+id/tvActor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCast3"
+                android:layout_marginTop="6dp"
+                android:maxEms="5"
+                android:text="@string/actor_mark_ruffalo"
+                android:textAppearance="@style/actors"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCast4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/image_hemsworth"/>
+
+            <TextView
+                android:id="@+id/tvActor4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCast4"
+                android:layout_marginTop="6dp"
+                android:maxEms="5"
+                android:text="@string/actor_chris_hemsworth"
+                android:textAppearance="@style/actors"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

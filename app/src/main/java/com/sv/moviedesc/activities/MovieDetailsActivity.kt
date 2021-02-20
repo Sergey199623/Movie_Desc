@@ -1,5 +1,7 @@
 package com.sv.moviedesc.activities
 
-class MovieDetailsActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class MovieDetailsActivity : AppCompatActivity() {
 
 }
