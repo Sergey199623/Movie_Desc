@@ -10,7 +10,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_main_movie_desc">Avengers: <br/> End Game</string>
-    <string name="age_13">13 +</string>
+    <string name="age_13">13+</string>
     <string name="tag">Action, Adventure, Fantasy</string>
     <string name="storyline">Storyline</string>
     <string name="avenger_end_game_storyline">After the devastating events of Avengers: Infinity War,
@@ -24,5 +24,6 @@
     <string name="actor_mark_ruffalo">Mark Ruffalo</string>
     <string name="actor_chris_hemsworth">Chris Hemsworth</string>
     <string name="back">Back</string>
+    <string name="movies_list">Movies list</string>
 
 </resources>
