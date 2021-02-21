@@ -15,8 +15,12 @@ import androidx.navigation.fragment.findNavController
 
 
 import com.sv.moviedesc.R
+import com.sv.moviedesc.adapters.AdapterActors
+import com.sv.moviedesc.adapters.AdapterMovies
 
 class FragmentMoviesList : Fragment() {
+
+    private lateinit var adapter: AdapterMovies
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,13 +34,5 @@ class FragmentMoviesList : Fragment() {
         moveToFilm?.setOnClickListener {
             findNavController().navigate(R.id.fragmentMoviesDetails)
         }
-//
-//        view.findViewById<ImageButton>(R.id.ivFilm1)?.setOnClickListener {
-//            findNavController().navigate(R.id.fragmentMoviesDetails, null)
-//        }
-
-//        view.findViewById<ImageButton>(R.id.ivFilm1)?.setOnClickListener(
-//                Navigation.createNavigateOnClickListener(R.id.next_action, null)
-//        )
     }
 }
