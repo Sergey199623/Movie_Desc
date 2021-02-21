@@ -6,18 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 
 import com.sv.moviedesc.R
 import com.sv.moviedesc.adapters.AdapterActors
-import com.sv.moviedesc.adapters.OnRecyclerItemClicked
-import com.sv.moviedesc.data.models.Actor
+
 import com.sv.moviedesc.source.ActorsDataSource
 
 class FragmentMoviesDetails : Fragment() {
 
-    private var recycler: RecyclerView? = null
+    private lateinit var adapter: AdapterActors
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -26,8 +25,9 @@ class FragmentMoviesDetails : Fragment() {
     ): View? = inflater.inflate(R.layout.fragment_movies_details, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recycler = view.findViewById(R.id.rv_actors)
-        recycler?.adapter = AdapterActors(clickListener)
+        val recycler: RecyclerView = view.findViewById(R.id.rv_actors)
+        adapter = AdapterActors()
+        recycler.adapter = adapter
     }
 
     override fun onStart() {
@@ -35,30 +35,8 @@ class FragmentMoviesDetails : Fragment() {
         updateData()
     }
 
-    override fun onDetach() {
-        recycler = null
-        super.onDetach()
-    }
-
     private fun updateData() {
-        (recycler?.adapter as? AdapterActors)?.apply {
-            bindActors(ActorsDataSource().getActors())
-        }
-    }
-
-    private fun doOnClick(actor: Actor) {
-        recycler?.let { rv ->
-            Snackbar.make(
-                    rv,
-                    getString(R.string.fragment_actors_chosen_text, actor.name),
-                    Snackbar.LENGTH_SHORT)
-                    .show()
-        }
-    }
-
-    private val clickListener = object : OnRecyclerItemClicked {
-        override fun onClick(actor: Actor) {
-            doOnClick(actor)
-        }
+        adapter.bindActors(ActorsDataSource().getActors())
+        adapter.notifyDataSetChanged()
     }
 }

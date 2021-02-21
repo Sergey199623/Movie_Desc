@@ -14,55 +14,35 @@ import com.bumptech.glide.request.RequestOptions
 import com.sv.moviedesc.R
 import com.sv.moviedesc.data.models.Actor
 
-class AdapterActors(private val clickListener: OnRecyclerItemClicked) : RecyclerView.Adapter<ActorsViewHolder>() {
+class AdapterActors : RecyclerView.Adapter<DataViewHolder>() {
 
-    private var actors = listOf<Actor>()
+    private var actors: List<Actor> = listOf()
 
-    override fun getItemViewType(position: Int): Int {
-        return when (actors.size) {
-            0 -> VIEW_TYPE_EMPTY
-            else -> VIEW_TYPE_ACTORS
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
+        val view: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_actors_data, parent, false)
+        return DataViewHolder(view)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
-        return when (viewType) {
-            VIEW_TYPE_EMPTY -> EmptyViewHolder(
-                LayoutInflater.from(
-                    parent.context
-                ).inflate(R.layout.item_actors_empty, parent, false)
-            )
-            else -> DataViewHolder(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_actors_data, parent, false)
-            )
-        }
-    }
-
-    override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
-        when (holder) {
-            is DataViewHolder -> {
-                holder.onBind(actors[position])
-                holder.itemView.setOnClickListener {
-                    clickListener.onClick(actors[position])
-                }
-            }
-            is EmptyViewHolder -> { /* nothing to bind */ }
-        }
+    override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
+        holder.onBind(actors[position])
     }
 
     override fun getItemCount(): Int = actors.size
 
     fun bindActors(newActors: List<Actor>) {
         actors = newActors
-        notifyDataSetChanged()
     }
 }
 
-abstract class ActorsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-private class EmptyViewHolder(itemView: View) : ActorsViewHolder(itemView)
-private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
+    companion object {
+        private val imageOption = RequestOptions()
+            .placeholder(R.drawable.ic_avatar_placeholder)
+            .fallback(R.drawable.ic_avatar_placeholder)
+            .circleCrop()
+    }
 
     private val avatar: ImageView = itemView.findViewById(R.id.iv_actor_avatar)
     private val name: TextView = itemView.findViewById(R.id.tv_actor_name)
@@ -72,24 +52,9 @@ private class DataViewHolder(itemView: View) : ActorsViewHolder(itemView) {
             .load(actor.avatar)
             .apply(imageOption)
             .into(avatar)
-
         name.text = actor.name
-    }
-
-    companion object {
-        private val imageOption = RequestOptions()
-            .placeholder(R.drawable.ic_avatar_placeholder)
-            .fallback(R.drawable.ic_avatar_placeholder)
-            .circleCrop()
     }
 }
 
 private val RecyclerView.ViewHolder.context
     get() = this.itemView.context
-
-private const val VIEW_TYPE_EMPTY = 0
-private const val VIEW_TYPE_ACTORS = 1
-
-interface OnRecyclerItemClicked {
-    fun onClick(actor: Actor)
-}
