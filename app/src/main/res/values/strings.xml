@@ -24,5 +24,7 @@
     <string name="actor_chris_hemsworth">Chris Hemsworth</string>
     <string name="back">Back</string>
     <string name="movies_list">Movies list</string>
+    <string name="fragment_actors_empty_text">There are no actors right now</string>
+    <string name="fragment_actors_chosen_text">You chose: %1$s</string>
 
 </resources>

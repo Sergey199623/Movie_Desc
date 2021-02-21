@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        val tvMove : TextView = findViewById(R.id.tvMoveToMovie)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -26,22 +25,5 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.nav_host_fragment, FragmentMoviesList())
                 .commit()
         }
-
-//        tvMove.setOnClickListener { moveToMovieDesc() }
-    }
-
-    fun onFragment1NextClick() {
-        navController.navigate(R.id.fragmentMoviesDetails)
-    }
-
-    fun onFragment1BackClick() {}
-
-
-    fun onFragment2NextClick() {
-//        navController.navigate(R.id.fragment3)
-    }
-
-    fun onFragment2BackClick() {
-        navController.popBackStack()
     }
 }

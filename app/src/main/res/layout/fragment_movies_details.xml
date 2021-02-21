@@ -210,96 +210,108 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvCast" >
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_actors"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp">
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_list_header"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
 
-                    <ImageView
-                        android:id="@+id/ivCast1"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/image_robert"/>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp">-->
 
-                    <TextView
-                        android:id="@+id/tvActor1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivCast1"
-                        android:layout_marginTop="6dp"
-                        android:maxEms="5"
-                        android:text="@string/actor_robert_downey"
-                        android:textAppearance="@style/actors"/>
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivCast1"-->
+<!--                        android:layout_width="66dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/image_robert" />-->
 
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvActor1"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/ivCast1"-->
+<!--                        android:layout_marginTop="6dp"-->
+<!--                        android:maxEms="5"-->
+<!--                        android:text="@string/actor_robert_downey"-->
+<!--                        android:textAppearance="@style/actors"/>-->
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp">
+<!--                </RelativeLayout>-->
 
-                    <ImageView
-                        android:id="@+id/ivCast2"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/image_chris"/>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp">-->
 
-                    <TextView
-                        android:id="@+id/tvActor2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivCast2"
-                        android:layout_marginTop="6dp"
-                        android:maxEms="5"
-                        android:text="@string/actor_chris_evans"
-                        android:textAppearance="@style/actors"/>
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivCast2"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/image_chris"/>-->
 
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvActor2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/ivCast2"-->
+<!--                        android:layout_marginTop="6dp"-->
+<!--                        android:maxEms="5"-->
+<!--                        android:text="@string/actor_chris_evans"-->
+<!--                        android:textAppearance="@style/actors"/>-->
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp">
+<!--                </RelativeLayout>-->
 
-                    <ImageView
-                        android:id="@+id/ivCast3"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/image_mark"/>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp">-->
 
-                    <TextView
-                        android:id="@+id/tvActor3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivCast3"
-                        android:layout_marginTop="6dp"
-                        android:maxEms="5"
-                        android:text="@string/actor_mark_ruffalo"
-                        android:textAppearance="@style/actors"/>
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivCast3"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/image_mark"/>-->
 
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvActor3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/ivCast3"-->
+<!--                        android:layout_marginTop="6dp"-->
+<!--                        android:maxEms="5"-->
+<!--                        android:text="@string/actor_mark_ruffalo"-->
+<!--                        android:textAppearance="@style/actors"/>-->
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+<!--                </RelativeLayout>-->
 
-                    <ImageView
-                        android:id="@+id/ivCast4"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/image_hemsworth"/>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content">-->
 
-                    <TextView
-                        android:id="@+id/tvActor4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivCast4"
-                        android:layout_marginTop="6dp"
-                        android:maxEms="5"
-                        android:text="@string/actor_chris_hemsworth"
-                        android:textAppearance="@style/actors"/>
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivCast4"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/image_hemsworth"/>-->
 
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvActor4"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/ivCast4"-->
+<!--                        android:layout_marginTop="6dp"-->
+<!--                        android:maxEms="5"-->
+<!--                        android:text="@string/actor_chris_hemsworth"-->
+<!--                        android:textAppearance="@style/actors"/>-->
+
+<!--                </RelativeLayout>-->
 
             </LinearLayout>
 
