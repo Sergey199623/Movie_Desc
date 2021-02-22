@@ -5,17 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 
-
 import com.sv.moviedesc.R
-import com.sv.moviedesc.adapters.AdapterActors
 import com.sv.moviedesc.adapters.AdapterMovies
 
 class FragmentMoviesList : Fragment() {

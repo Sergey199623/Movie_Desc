@@ -56,150 +56,18 @@
 
             </RelativeLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/movie"
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movies"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/bg_gray"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                app:layout_constraintTop_toBottomOf="@+id/rlTop_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rlTop_menu">
-
-                <ImageButton
-                    android:id="@+id/ivFilm1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="2dp"
-                    android:background="#191926"
-                    android:src="@drawable/image_movie_avengers"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-                <RelativeLayout
-                    android:id="@+id/rlPg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#191926">
-
-                    <TextView
-                        android:layout_width="24dp"
-                        android:layout_height="16dp"
-                        android:textStyle="bold"
-                        android:text="@string/age_13"
-                        android:textAppearance="@style/age" />
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_like"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="13dp"
-                    android:layout_marginEnd="8dp"/>
-
-                <TextView
-                    android:id="@+id/tvTag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="214dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginEnd="14dp"
-                    android:text="@string/tag"
-                    android:textAppearance="@style/tag"
-                    android:lineSpacingExtra="3sp"
-                    android:textSize="8sp"
-                    android:gravity="center_vertical"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <LinearLayout
-                    android:id="@+id/rlRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvTag">
-
-                    <ImageView
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:layout_marginEnd="2dp"
-                        android:src="@drawable/ic_star_red"/>
-
-                    <ImageView
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:layout_marginEnd="2dp"
-                        android:src="@drawable/ic_star_red"/>
-
-                    <ImageView
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:layout_marginEnd="2dp"
-                        android:src="@drawable/ic_star_red"/>
-
-                    <ImageView
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:layout_marginEnd="2dp"
-                        android:src="@drawable/ic_star_red"/>
-
-                    <ImageView
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:layout_marginEnd="2dp"
-                        android:src="@drawable/ic_star_gray"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/count_review125"
-                        android:textSize="8sp"
-                        android:textStyle="bold"
-                        android:textAppearance="@style/style_reviews" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/rlRating"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp" >
-
-                    <TextView
-                        android:id="@+id/tvMoveName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title_main_movie_desc"
-                        android:textAppearance="@style/storyline_desc"
-                        android:lineSpacingExtra="4sp"
-                        android:gravity="center_vertical" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/duration"
-                        android:textAppearance="@style/duration" />
-
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

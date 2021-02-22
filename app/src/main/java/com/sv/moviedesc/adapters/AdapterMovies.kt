@@ -44,18 +44,23 @@ class DataViewHolderMovie(itemView: View) : RecyclerView.ViewHolder(itemView) {
             .circleCrop()
     }
 
-    val pg: TextView = itemView.findViewById()
-    val avatar: ImageView = itemView.findViewById()
-    val genre: TextView = itemView.findViewById()
-    val rating: TextView = itemView.findViewById()
-    val duration: TextView = itemView.findViewById()
+    val pg: TextView = itemView.findViewById(R.id.tv_pg)
+    val avatar: ImageView = itemView.findViewById(R.id.iv_avatar_film)
+    val genre: TextView = itemView.findViewById(R.id.tv_genre)
+    val rating: TextView = itemView.findViewById(R.id.tv_rating)
+    val name: TextView = itemView.findViewById(R.id.tv_name)
+    val duration: TextView = itemView.findViewById(R.id.tv_duration)
 
     fun onBind(movie: Movie) {
         Glide.with(context)
-            .load(actor.avatar)
+            .load(movie.avatar)
             .apply(imageOption)
             .into(avatar)
-        name.text = actor.name
+        pg.text = movie.pg
+        genre.text = movie.genre
+        rating.text = movie.rating
+        name.text = movie.name
+        duration.text = movie.duration
     }
 }
 

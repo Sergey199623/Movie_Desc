@@ -10,21 +10,23 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.sv.moviedesc.R
 import com.sv.moviedesc.adapters.AdapterActors
+import com.sv.moviedesc.adapters.AdapterMovies
 import com.sv.moviedesc.source.ActorsDataSource
+import com.sv.moviedesc.source.MovieDataSource
 
 class FragmentMoviesDetails : Fragment() {
 
-    private lateinit var adapter: AdapterActors
+    private lateinit var adapter: AdapterMovies
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_movies_details, container, false)
+    ): View? = inflater.inflate(R.layout.fragment_movies_list, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val recycler: RecyclerView = view.findViewById(R.id.rv_actors)
-        adapter = AdapterActors()
+        adapter = AdapterMovies()
         recycler.adapter = adapter
     }
 
@@ -34,7 +36,7 @@ class FragmentMoviesDetails : Fragment() {
     }
 
     private fun updateData() {
-        adapter.bindActors(ActorsDataSource().getActors())
+        adapter.bindMovies(MovieDataSource().getActors())
         adapter.notifyDataSetChanged()
     }
 }
